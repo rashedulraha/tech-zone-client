@@ -17,7 +17,7 @@ const Hero = () => {
       name: "Razer BlackWidow V4",
       price: "$199",
       image:
-        "https://i.pinimg.com/1200x/2d/78/3a/2d783aa801a613271f349d9c22e4d026.jpg",
+        "https://i.pinimg.com/1200x/08/c7/10/08c7109118bed48400551a13e7a124be.jpg",
       description: "Mechanical keyboard built for ultimate speed.",
     },
     {
@@ -25,7 +25,7 @@ const Hero = () => {
       name: "PlayStation 5 Pro",
       price: "$799",
       image:
-        "https://i.pinimg.com/736x/d6/11/72/d611726a41f6e210166297379555e09f.jpg",
+        "https://i.pinimg.com/1200x/9e/08/24/9e0824fa210808a3166872dad36a6b90.jpg",
       description: "Next-gen console gaming redefined.",
     },
     {
@@ -33,7 +33,7 @@ const Hero = () => {
       name: "NVIDIA GeForce RTX 5090",
       price: "$2,499",
       image:
-        "https://i.pinimg.com/736x/21/5d/40/215d409951ffdf4f01f8e8a798a68b75.jpg",
+        "https://i.pinimg.com/736x/fc/e2/ae/fce2ae1f09e352729e37fb056af333a9.jpg",
       description: "Unmatched performance for 8K gaming.",
     },
     {
@@ -41,7 +41,7 @@ const Hero = () => {
       name: "Samsung Odyssey G9 OLED",
       price: "$1,399",
       image:
-        "https://i.pinimg.com/736x/b5/e3/34/b5e334582f34586d4e2808e03f90558a.jpg",
+        "https://i.pinimg.com/1200x/f3/4e/f9/f34ef9aa321a485149bdf03c4931171e.jpg",
       description: "Ultra-wide curved display, 240Hz refresh rate.",
     },
     {
@@ -49,13 +49,13 @@ const Hero = () => {
       name: "Logitech G Pro X Headset",
       price: "$129",
       image:
-        "https://i.pinimg.com/736x/55/26/50/552650d306283c83e20e8b15a519e917.jpg",
+        "https://i.pinimg.com/1200x/2e/eb/9c/2eeb9c6eebd67b188137f55b5d4bbb88.jpg",
       description: "Crystal clear audio for competitive play.",
     },
   ];
 
   return (
-    <section className="relative py-12 md:py-20 lg:py-24 overflow-hidden bg-background">
+    <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden bg-background">
       <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div className="text-center lg:text-left space-y-6 order-2 lg:order-1 relative z-10">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary/80 backdrop-blur-sm border border-secondary text-secondary-foreground text-xs sm:text-sm font-medium mb-2 animate-pulse">
