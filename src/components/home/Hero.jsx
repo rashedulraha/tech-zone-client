@@ -6,6 +6,7 @@ import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
@@ -55,10 +56,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden bg-background">
-      <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <div className="text-center lg:text-left space-y-6 order-2 lg:order-1 relative z-10">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary/80 backdrop-blur-sm border border-secondary text-secondary-foreground text-xs sm:text-sm font-medium mb-2 animate-pulse">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-background">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col items-center gap-12">
+        {/* ---------- TOP TEXT SECTION ---------- */}
+        <div className="text-center max-w-4xl space-y-6 relative z-10">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary/80 backdrop-blur-sm border border-secondary text-secondary-foreground text-xs sm:text-sm font-semibold animate-pulse">
             <span className="relative flex h-2 w-2 mr-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -66,39 +68,41 @@ const Hero = () => {
             New Arrival: PS5 Pro Unleashed
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary leading-[1.1]">
-            Unleash Your <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-pink-600 to-purple-600">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-primary leading-[1.1]">
+            Unleash Your{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 via-pink-600 to-purple-600">
               True Potential
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Dominate the competition with the latest in **high-performance
-            gaming gear, powerful PC components, and immersive peripherals.
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Dominate the competition with the latest in high-performance gaming
+            gear, powerful PC components, and immersive peripherals.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link href="/gaming-essentials" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="w-full sm:w-auto gap-2 shadow-lg hover:shadow-primary/25 transition-all duration-300 h-12 text-base">
+                className="w-full gap-2 shadow-lg hover:shadow-primary/25 transition-all duration-300 h-12 text-base">
                 Explore Gear <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
+
             <Link href="/deals" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto h-12 text-base hover:bg-secondary/50">
+                className="w-full h-12 text-base hover:bg-secondary/50">
                 View Today's Deals
               </Button>
             </Link>
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[350px] sm:max-w-md lg:max-w-full lg:ml-auto order-1 lg:order-2 mb-8 lg:mb-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-red-500/20 rounded-full blur-[80px] -z-10 animate-pulse pointer-events-none" />
+        {/* ---------- BOTTOM SWIPER SECTION ---------- */}
+        <div className="relative w-full max-w-md sm:max-w-xl lg:max-w-3xl mx-auto">
+          <div className="absolute inset-0 w-[300px] h-[300px] bg-red-500/20 rounded-full blur-[100px] -z-10 mx-auto" />
 
           <Swiper
             modules={[Autoplay, Pagination, EffectCoverflow]}
@@ -114,10 +118,7 @@ const Hero = () => {
               modifier: 2.5,
               slideShadows: false,
             }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
+            pagination={{ clickable: true, dynamicBullets: true }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -128,8 +129,8 @@ const Hero = () => {
               <SwiperSlide
                 key={product.id}
                 className="!w-[280px] sm:!w-[320px]">
-                <div className="group relative bg-card/50 border border-white/10 dark:border-white/5 backdrop-blur-md p-4 rounded-3xl shadow-2xl hover:shadow-primary/10 transition-all duration-500 h-full">
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+                <div className="group bg-card/50 border border-white/10 dark:border-white/5 backdrop-blur-md p-4 rounded-3xl shadow-2xl hover:shadow-primary/10 transition-all duration-500 h-full">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
                     HOT
                   </div>
 
@@ -140,16 +141,15 @@ const Hero = () => {
                       height={400}
                       alt={product.name}
                       className="w-full h-full object-contain drop-shadow-xl"
-                      priority={product.id <= 2}
                     />
                   </div>
 
-                  <div className="space-y-3 px-1">
+                  <div className="space-y-3">
                     <div className="flex justify-between items-start gap-2">
                       <h3 className="font-bold text-lg leading-tight line-clamp-1 group-hover:text-primary transition-colors">
                         {product.name}
                       </h3>
-                      <div className="flex items-center gap-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-0.5 rounded text-xs font-bold shrink-0">
+                      <div className="flex items-center gap-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-0.5 rounded text-xs font-bold">
                         <Star className="w-3 h-3 fill-current" />
                         <span>5.0</span>
                       </div>

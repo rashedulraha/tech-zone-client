@@ -22,12 +22,9 @@ const Navbar = () => {
   const user = session?.user;
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/60 backdrop-blur-xl shadow-sm supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/60 backdrop-blur-xl shadow-sm supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="h-9 w-9 bg-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
-            T
-          </div>
           <span className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">
             Tech Zone
           </span>

@@ -35,7 +35,9 @@ const Services = () => {
               </div>
               <div>
                 <h3 className="font-bold text-lg">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}
