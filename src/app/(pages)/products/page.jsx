@@ -16,7 +16,7 @@ export default function ProductsPage() {
     queryKey: ["all-products"],
     queryFn: async () => {
       const { data } = await axios.get(
-        "https://gadget-galaxy-server-ten.vercel.app/api/products"
+        "https://https://techzoneserver.vercel.app/api/products"
       );
       return data;
     },
@@ -67,8 +67,7 @@ export default function ProductsPage() {
               variant={cat === selectCategory ? "default" : "outline"}
               size="sm"
               className="rounded-full"
-              onClick={() => setSelectCategory(cat)}
-            >
+              onClick={() => setSelectCategory(cat)}>
               {cat}
             </Button>
           ))}

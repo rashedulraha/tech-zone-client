@@ -23,8 +23,7 @@ export default function AboutPage() {
           <div className="container mx-auto max-w-3xl space-y-6">
             <Badge
               variant="outline"
-              className="border-border text-foreground px-4 py-1"
-            >
+              className="border-border text-foreground px-4 py-1">
               Established 2024
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground">
@@ -57,7 +56,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold">Our Journey</h2>
               <p className="text-foreground leading-relaxed">
-                GadgetGalaxy started as a small passion project in a garage. We
+                Tech Zone started as a small passion project in a garage. We
                 were frustrated with the lack of reliable, premium tech stores
                 that offered genuine products with excellent support.
               </p>

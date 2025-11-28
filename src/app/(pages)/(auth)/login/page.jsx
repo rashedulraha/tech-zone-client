@@ -59,11 +59,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center py-10">
-      <Card className="w-full max-w-md mx-auto shadow-lg border-0 sm:border sm:border-gray-200 px-6 sm:px-10">
+    <div className="flex  items-center justify-center py-10">
+      <Card className="w-full max-w-md mx-auto shadow-lg border-0 sm:border sm:border-gray-200 px-2 sm:px-3">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-2xl font-bold text-primary">
-            GadgetGalaxy
+            Tech Zone
           </CardTitle>
           <CardDescription>
             Enter your email & password below to access your account
@@ -87,7 +87,7 @@ const Login = () => {
                 })}
                 id="email"
                 type="email"
-                placeholder="admin@gmail.com"
+                placeholder="rashedul@gmail.com"
                 className={`h-11 ${
                   errors?.email && "border-red-500 focus-visible:ring-red-500"
                 } focus-visible:ring-0 focus-visible:ring-offset-0`}
@@ -136,7 +136,7 @@ const Login = () => {
             )}
 
             {/* Submit Button */}
-            <Button className="w-full h-11 bg-foreground" disabled={loading}>
+            <Button className="w-full h-11" disabled={loading}>
               {loading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -166,8 +166,7 @@ const Login = () => {
               onClick={handelGoogleLogin}
               variant={"outline"}
               className="w-full cursor-pointer h-11 gap-2"
-              disabled={loading}
-            >
+              disabled={loading}>
               <FcGoogle className="h-5 w-5" />
               Login with Google
             </Button>
@@ -177,8 +176,7 @@ const Login = () => {
             Do not have an account?{" "}
             <Link
               href="/register"
-              className="text-primary font-semibold hover:underline"
-            >
+              className="text-primary font-semibold hover:underline">
               Register
             </Link>
           </p>

@@ -41,7 +41,7 @@ export default function MyProductsPage() {
     queryKey: ["myProducts"],
     queryFn: async () => {
       const { data } = await axios.get(
-        `https://gadget-galaxy-server-ten.vercel.app/api/products/myProducts?email=${user.email}`
+        `https://https://techzoneserver.vercel.app/api/products/myProducts?email=${user.email}`
       );
       return data;
     },
@@ -50,7 +50,7 @@ export default function MyProductsPage() {
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
       const { data } = await axios.delete(
-        `https://gadget-galaxy-server-ten.vercel.app/api/products/${id}`
+        `https://https://techzoneserver.vercel.app/api/products/${id}`
       );
       return data;
     },
@@ -123,8 +123,7 @@ export default function MyProductsPage() {
                   return (
                     <TableRow
                       key={product._id}
-                      className="hover:bg-muted/20 transition-colors"
-                    >
+                      className="hover:bg-muted/20 transition-colors">
                       {/* Image Cell (Hidden on very small screens) */}
                       <TableCell className="hidden sm:table-cell">
                         <div className="relative h-12 w-12 rounded-lg overflow-hidden border border-border bg-background">
@@ -163,8 +162,7 @@ export default function MyProductsPage() {
                               ? "destructive"
                               : "secondary"
                           }
-                          className="font-normal"
-                        >
+                          className="font-normal">
                           {product.status}
                         </Badge>
                       </TableCell>
@@ -192,8 +190,7 @@ export default function MyProductsPage() {
                             </Link>
                             <DropdownMenuItem
                               onClick={() => handleDelete(product._id)}
-                              className="cursor-pointer gap-2 text-red-600 focus:text-red-600"
-                            >
+                              className="cursor-pointer gap-2 text-red-600 focus:text-red-600">
                               <Trash2 className="w-4 h-4" /> Delete
                             </DropdownMenuItem>
                           </DropdownMenuContent>

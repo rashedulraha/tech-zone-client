@@ -12,7 +12,7 @@ const FeaturedProducts = () => {
     queryKey: ["latestProducts"],
     queryFn: async () => {
       const { data } = await axios(
-        "https://gadget-galaxy-server-ten.vercel.app/api/products/latest"
+        "https://https://techzoneserver.vercel.app/api/products/latest"
       );
       return data;
     },

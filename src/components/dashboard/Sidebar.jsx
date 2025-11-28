@@ -14,8 +14,8 @@ import {
   SheetContent,
   SheetTrigger,
   SheetTitle,
-  SheetHeader
-} from "@/components/ui/sheet"; 
+  SheetHeader,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -26,7 +26,6 @@ const sidebarLinks = [
   { name: "Settings", path: "/dashboard/settings", icon: Settings },
 ];
 
-
 const SidebarContent = ({ onClick }) => {
   const pathname = usePathname();
 
@@ -35,7 +34,7 @@ const SidebarContent = ({ onClick }) => {
       {/* Logo Area */}
       <div className="p-6 border-b border-border">
         <h2 className="text-2xl font-bold text-foreground tracking-tight">
-          GadgetGalaxy
+          Tech Zone
         </h2>
         <p className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
           Admin Panel
@@ -50,13 +49,12 @@ const SidebarContent = ({ onClick }) => {
             <Link
               key={item.path}
               href={item.path}
-              onClick={onClick} 
+              onClick={onClick}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                 isActive
                   ? "bg-slate-900 text-white shadow-md"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
-              }`}
-            >
+              }`}>
               <item.icon className="w-5 h-5" />
               {item.name}
             </Link>
@@ -67,7 +65,6 @@ const SidebarContent = ({ onClick }) => {
   );
 };
 
-
 export const Sidebar = () => {
   return (
     <aside className="hidden lg:flex w-64 bg-background border-r border-border h-screen sticky top-0 flex-col">
@@ -75,7 +72,6 @@ export const Sidebar = () => {
     </aside>
   );
 };
-
 
 export const MobileSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -88,16 +84,13 @@ export const MobileSidebar = () => {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      
+
       <SheetContent side="left" className="p-0 w-72">
-     
         <SheetHeader className="sr-only">
-            <SheetTitle>Mobile Menu</SheetTitle>
+          <SheetTitle>Mobile Menu</SheetTitle>
         </SheetHeader>
-        
-       
+
         <SidebarContent onClick={() => setOpen(false)} />
-        
       </SheetContent>
     </Sheet>
   );

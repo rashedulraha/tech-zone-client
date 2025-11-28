@@ -35,7 +35,7 @@ export default function AddProductForm() {
     mutationFn: async (product) => {
       setLoading(true);
       const { data } = await axios.post(
-        `https://gadget-galaxy-server-ten.vercel.app/api/products`,
+        `https://https://techzoneserver.vercel.app/api/products`,
         product
       );
       if (data.insertedId) {
@@ -303,8 +303,7 @@ export default function AddProductForm() {
               type="submit"
               size="lg"
               className="w-full text-lg"
-              disabled={loading}
-            >
+              disabled={loading}>
               {loading ? (
                 <Loader2 className="animate-spin mr-2" />
               ) : (

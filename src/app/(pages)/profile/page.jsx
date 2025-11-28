@@ -41,7 +41,6 @@ export default function ProfilePage() {
       <Card className="w-full max-w-md shadow-lg border border-border bg-card">
         <CardHeader className="flex flex-col items-center pb-2">
           <Avatar className="w-24 h-24 border-4 border-border shadow-md mb-4">
-            
             <Image
               width={100}
               height={100}
@@ -57,7 +56,7 @@ export default function ProfilePage() {
             {user?.name || "User Name"}
           </h1>
           <p className="text-muted-foreground text-sm font-medium">
-            GadgetGalaxy Member
+            Tech Zone Member
           </p>
 
           <div className="mt-2 px-3 py-1 bg-muted text-green-600 text-xs font-bold rounded-full border border-border flex items-center gap-1">
@@ -102,8 +101,7 @@ export default function ProfilePage() {
         <CardFooter className="flex flex-col gap-3 pt-2">
           <Button
             onClick={() => signOut({ callbackUrl: "/login" })}
-            className="w-full bg-red-500 hover:bg-red-600 h-11 text-md"
-          >
+            className="w-full bg-red-500 hover:bg-red-600 h-11 text-md">
             <LogOut className="w-4 h-4 mr-2" /> Logout
           </Button>
 

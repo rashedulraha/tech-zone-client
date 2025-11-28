@@ -34,10 +34,10 @@ const Register = () => {
   };
   return (
     <div className="my-20">
-      <Card className="w-full max-w-md mx-auto shadow-lg border-0 sm:border sm:border-gray-200 px-10">
+      <Card className="w-full max-w-md mx-auto shadow-lg border-0 sm:border sm:border-gray-200 px-3">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-2xl font-bold text-primary">
-            GadgetGalaxy
+            Tech Zone
           </CardTitle>
           <CardDescription>
             Enter your email & password below to access your account
@@ -60,7 +60,7 @@ const Register = () => {
                 })}
                 id="displayName"
                 type="text"
-                placeholder="Arafat Nill"
+                placeholder="Rashedul islam"
                 className={`h-11 ${
                   errors?.displayName && "border border-red-500"
                 } focus-visible:ring-0 focus-visible:ring-offset-0 `}
@@ -108,7 +108,7 @@ const Register = () => {
                 })}
                 id="email"
                 type="email"
-                placeholder="arafat@example.com"
+                placeholder="rashedul@example.com"
                 className={`h-11 ${
                   errors?.email && "border border-red-500"
                 } focus-visible:ring-0 focus-visible:ring-offset-0 `}
@@ -149,8 +149,7 @@ const Register = () => {
             <Button
               onClick={googleLogin}
               variant={"outline"}
-              className="w-full mt-5 cursor-pointer h-11"
-            >
+              className="w-full mt-5 cursor-pointer h-11">
               <FcGoogle className="h-5 w-5" />
               Continue with google
             </Button>

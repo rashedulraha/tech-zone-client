@@ -42,7 +42,7 @@ export default function ProductDetailsPage() {
     queryKey: ["singleProductView", slug],
     queryFn: async () => {
       const { data } = await axios.get(
-        `https://gadget-galaxy-server-ten.vercel.app/api/products/${slug}`
+        `https://https://techzoneserver.vercel.app/api/products/${slug}`
       );
       return data;
     },
@@ -67,8 +67,7 @@ export default function ProductDetailsPage() {
         {/* Back Button */}
         <Link
           href="/products"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
-        >
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Store
         </Link>
 
@@ -113,8 +112,7 @@ export default function ProductDetailsPage() {
                           ? "ring-2 ring-slate-900 ring-offset-2 border-transparent"
                           : "border-transparent hover:border-border"
                       }
-                    `}
-                  >
+                    `}>
                     <Image
                       src={img}
                       fill
@@ -136,8 +134,7 @@ export default function ProductDetailsPage() {
               <div className="flex items-center gap-3">
                 <Badge
                   variant="secondary"
-                  className="rounded-full px-3 py-1 bg-amber-100 text-amber-700 hover:bg-amber-200 border-none font-medium"
-                >
+                  className="rounded-full px-3 py-1 bg-amber-100 text-amber-700 hover:bg-amber-200 border-none font-medium">
                   {product?.status}
                 </Badge>
                 <div className="flex items-center gap-1 text-sm font-bold text-amber-500">
@@ -212,8 +209,7 @@ export default function ProductDetailsPage() {
                             : "ring-1 ring-gray-200"
                         }
                       `}
-                      title={color}
-                    ></button>
+                      title={color}></button>
                   ))}
                 </div>
               </div>
@@ -224,8 +220,7 @@ export default function ProductDetailsPage() {
                 <div className="flex items-center justify-between border border-border rounded-full px-5 h-14 w-full sm:w-40 hover:border-gray-400 transition-colors bg-white">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="text-gray-400 hover:text-black transition p-2"
-                  >
+                    className="text-gray-400 hover:text-black transition p-2">
                     <Minus className="w-5 h-5" />
                   </button>
                   <span className="font-bold text-lg w-4 text-center">
@@ -233,8 +228,7 @@ export default function ProductDetailsPage() {
                   </span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="text-gray-400 hover:text-black transition p-2"
-                  >
+                    className="text-gray-400 hover:text-black transition p-2">
                     <Plus className="w-5 h-5" />
                   </button>
                 </div>
@@ -247,8 +241,7 @@ export default function ProductDetailsPage() {
                 {/* Wishlist */}
                 <Button
                   variant="outline"
-                  className="h-14 w-14 cursor-pointer rounded-full border-border hover:border-red-500 hover:text-red-500 hover:bg-red-50 transition-colors"
-                >
+                  className="h-14 w-14 cursor-pointer rounded-full border-border hover:border-red-500 hover:text-red-500 hover:bg-red-50 transition-colors">
                   <Heart className="w-6 h-6" />
                 </Button>
               </div>
